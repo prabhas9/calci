@@ -111,7 +111,7 @@
 <b>
 <body>
   
-    <video src="4.mp4 " autoplay loop></video>
+     <video id="myVideo" src="4.mp4"></video>
     <div class="container">
         <input type="text" placeholder=" 0" id="input">
         <div>
@@ -152,6 +152,9 @@
          > Welcome To Calculator Website</marquee>
     </div>
     <script>
+         const video = document.getElementById('myVideo');
+        video.autoplay = true; 
+        video.loop = true;     
         let input=document.getElementById('input');
         let buttons=document.querySelectorAll('button');
         let string="";
