@@ -43,6 +43,8 @@
             left: 40%
         }
         button{
+            position: relative;
+            z-index: 1;
             font-size: 15px;
             border-color:rgb(230, 148, 26);
             border:none;
@@ -76,19 +78,13 @@
             background-color: orange;
         }
         .video{
-            position: absolute;
-            border-style:solid ;
-            border-color: aliceblue;
-            /* margin: 0;
-            padding: 0;
-            top: 0;
-            bottom: 0;
-            left:0;
-            right: 0; */
-            height:100vh;
-            width:100vw;
-            left:0;
-            top:0;
+             position: fixed; /* Make sure it's fixed in the background */
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1; /* Push the video behind the buttons */
+    pointer-events: none; /* Disable pointer events for the video */
            
  
             
